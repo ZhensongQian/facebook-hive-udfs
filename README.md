@@ -38,6 +38,8 @@ pyspark --jars facebook-udfs-1.0.3-SNAPSHOT.jar
 
 ```
 sqlContext.sql("CREATE TEMPORARY FUNCTION myJaccard AS 'com.facebook.hive.udf.UDFJaccard'")
+sqlContext.sql("SELECT  myJaccard(s1,s) as jaccard  FROM df2 ")
+
 
 ```
 
