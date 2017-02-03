@@ -31,3 +31,13 @@ SELECT md5(password) from users limit 1;
 ```
 
 **cool!!**
+# Using with pyspark
+```
+pyspark --jars facebook-udfs-1.0.3-SNAPSHOT.jar
+```
+
+```
+sqlContext.sql("CREATE TEMPORARY FUNCTION myJaccard AS 'com.facebook.hive.udf.UDFJaccard'")
+
+```
+
