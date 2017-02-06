@@ -45,7 +45,7 @@ sqlContext.sql("SELECT  myJaccard(s1,s) as jaccard  FROM df2 ")
 # Using with spark-submit 
 
 ```
-spark-submit  --master yarn-client --num-executors 5 --driver-memory 10G --executor-memory 25G  --jars facebook-udfs-1.0.3-SNAPSHOT.jar  --packages com.databricks:spark-csv_2.10:1.4.0 --class com.databricks.spark.csv testUDF.py```
+spark-submit  --master yarn-client --num-executors 5 --driver-memory 10G --executor-memory 25G  --jars facebook-udfs-1.0.3-SNAPSHOT.jar  --packages com.databricks:spark-csv_2.10:1.4.0 --class com.databricks.spark.csv testUDF.py
 ```
 
 
