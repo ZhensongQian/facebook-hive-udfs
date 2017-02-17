@@ -31,7 +31,8 @@ SELECT md5(password) from users limit 1;
 ```
 
 **cool!!**
-# Using with pyspark
+# Using with pyspark   -- better use this as the initial exploration step.
+
 ```
 pyspark --jars facebook-udfs-1.0.3-SNAPSHOT.jar
 ```
