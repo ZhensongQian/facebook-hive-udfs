@@ -29,6 +29,10 @@ Here's a sample:
 CREATE TEMPORARY FUNCTION md5 AS 'com.facebook.hive.udf.UDFMD5';
 SELECT md5(password) from users limit 1;
 ```
+```
+CREATE TEMPORARY FUNCTION myJaccard AS 'com.facebook.hive.udf.UDFJaccard';
+select myJaccard(array('a','b','c'), array('b','c','d') ) as jaccard_similarity;
+```
 
 **cool!!**
 # Using with pyspark   
