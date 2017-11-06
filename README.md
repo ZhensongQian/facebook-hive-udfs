@@ -23,9 +23,7 @@ Or simply download the `facebook-udfs-1.0.3-SNAPSHOT.jar`.
 
 # HOW DO USE IT?
 
-Like any other UDF, silly!
-
-Here's a sample:
+Like any other UDF, here's a sample:
 
 ```
 CREATE TEMPORARY FUNCTION md5 AS 'com.facebook.hive.udf.UDFMD5';
@@ -36,7 +34,6 @@ CREATE TEMPORARY FUNCTION myJaccard AS 'com.facebook.hive.udf.UDFJaccard';
 select myJaccard(array('a','b','c'), array('b','c','d') ) as jaccard_similarity;
 ```
 
-**cool!!**
 # Using with pyspark   
 -- better to use this as the initial exploration step.
 
