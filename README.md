@@ -19,6 +19,8 @@ mvn package
 
 This will produce a jar in `target/` which you can add to your Hive classpath.
 
+Or simply download the `facebook-udfs-1.0.3-SNAPSHOT.jar`.
+
 # HOW DO USE IT?
 
 Like any other UDF, silly!
