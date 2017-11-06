@@ -1,7 +1,6 @@
-facebook-hive-udfs
+Facebook's Hive UDFs
 ==================
 
-Facebook's Hive UDFs
 
 # WHAT IT IS
 
