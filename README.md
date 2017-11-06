@@ -2,7 +2,7 @@ Facebook's Hive UDFs
 ==================
 
 
-# WHAT IT IS
+## WHAT IT IS
 
 A computer guy at Facebook dumped a bunch of UDFs/UDAFs here:
 
@@ -20,7 +20,7 @@ This will produce a jar in `target/` which you can add to your Hive classpath.
 
 Or simply download the `facebook-udfs-1.0.3-SNAPSHOT.jar`.
 
-# HOW DO USE IT?
+## HOW DO USE IT?
 
 Like any other UDF, here's a sample:
 
@@ -33,7 +33,7 @@ CREATE TEMPORARY FUNCTION myJaccard AS 'com.facebook.hive.udf.UDFJaccard';
 select myJaccard(array('a','b','c'), array('b','c','d') ) as jaccard_similarity;
 ```
 
-# Using with pyspark   
+## Using with pyspark   
 -- better to use this as the initial exploration step.
 
 ```
@@ -46,7 +46,7 @@ sqlContext.sql("SELECT  myJaccard(s1,s) as jaccard  FROM df2 ")
 
 
 ```
-# Using with spark-submit 
+## Using with spark-submit 
 
 ```
 spark-submit  --master yarn-client --num-executors 5 --driver-memory 10G --executor-memory 25G  --jars facebook-udfs-1.0.3-SNAPSHOT.jar  --packages com.databricks:spark-csv_2.10:1.4.0 --class com.databricks.spark.csv testUDF.py
