@@ -36,8 +36,8 @@ public class SetOps {
     }
 
     public static double jaccard(Collection<String> s1, Collection<String> s2) {
-        SetPair p = new SetPair(s1,s2);
         if (s1.size()==0 && s2.size()==0) return 0;
+        SetPair p = new SetPair(s1,s2);
         // don't calculate the union, that's more expense
 //        double dice = 2.0 * p.intersectSize() / (s1.size() + s2.size());
         double AB = p.intersectSize();
@@ -46,8 +46,9 @@ public class SetOps {
 
     public static double sampleCorrectedJaccard(Collection<String> sample1, Collection<String> sample2,
             int fullSize1, int fullSize2) {
-        SetPair p = new SetPair(sample1,sample2);
+       
         if (sample1.size()==0 && sample2.size()==0) return 0;
+        SetPair p = new SetPair(sample1,sample2);
         double alpha = sample1.size()*1.0 / fullSize1;
         double beta = sample2.size()*1.0 / fullSize2;
         double correctedIntersectSize = p.intersectSize() *1.0 / alpha / beta;
