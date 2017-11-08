@@ -19,6 +19,7 @@ public class UDFJaccard extends UDF {
         return SetOps.jaccard(set1, set2);
     }
 
+    // performance better?
     public Double evaluate(List<String> set1, List<String> set2, int fullSize1, int fullSize2) {
         return SetOps.sampleCorrectedJaccard(set1, set2, fullSize1, fullSize2);
     }
