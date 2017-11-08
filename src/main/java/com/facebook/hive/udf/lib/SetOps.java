@@ -44,6 +44,7 @@ public class SetOps {
         return AB / (s1.size() + s2.size() - AB);
     }
 
+    // what's this? why?
     public static double sampleCorrectedJaccard(Collection<String> sample1, Collection<String> sample2,
             int fullSize1, int fullSize2) {
        
