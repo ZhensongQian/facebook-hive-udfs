@@ -28,6 +28,7 @@ Like any other UDF, here's a sample:
 CREATE TEMPORARY FUNCTION md5 AS 'com.facebook.hive.udf.UDFMD5';
 SELECT md5(password) from users limit 1;
 ```
+the `UDFJaccard` is suitful jaccard similarity computation in general.
 ```
 CREATE TEMPORARY FUNCTION myJaccard AS 'com.facebook.hive.udf.UDFJaccard';
 select myJaccard(array('a','b','c'), array('b','c','d') ) as jaccard_similarity;
